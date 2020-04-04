@@ -1,7 +1,9 @@
-import React, {useState, useEffect} from "react";
-import axios from "axios";
+import React  from "react";
+// VERSION 3.
+import useResources from "./useResources";
 
-const useResources = (resource) => {
+/*  VERSION 2.
+    const useResources = (resource) => {
     const [resources, setResources] = useState([]);
     const fetchResource = async (resource) => {
         return await axios.get(`https://jsonplaceholder.typicode.com/${resource}`);
@@ -10,7 +12,7 @@ const useResources = (resource) => {
         fetchResource(resource).then(res => setResources(res.data));
     }, [resource]);
     return resources;
-};
+};*/
 
 const ResourceList = ({resource}) => {
     // VERSION 2.
