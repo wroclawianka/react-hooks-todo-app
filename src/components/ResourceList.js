@@ -12,7 +12,8 @@ const ResourceList = ({resource}) => {
         fetchResource(resource).then(res => setResources(res.data));
     }, [resource]);
     /* why needed? thx to that useEffect will not fetch
-     resource if value of resource did not change*/
+     resource if value of resource did not change
+     one tricky case is object, {color: 'red'} and {color: 'red'} are not the same for JS */
 
     return (
         <ul>
