@@ -32,11 +32,14 @@ const ResourceList = ({resource}) => {
      one tricky case is object, {color: 'red'} and {color: 'red'} are not the same for JS */
 
     return (
-        <ul>
-            {resources.map(record => (
-                <li key={record.id}>{record.title}</li>
-            ))}
-        </ul>
+        <div>
+            <p>Your {resource}:</p>
+            <ul>
+                {resources.map(record => (
+                    <li key={record.id}>{record.title}</li>
+                ))}
+            </ul>
+        </div>
     )
 };
 
